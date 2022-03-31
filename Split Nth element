@@ -1,0 +1,26 @@
+Split Nth element
+Send Feedback
+Write a Python program to split a list every Nth element.
+Sample Input format:
+The first line of the input contains an integer n which denotes the nth element for splitting
+The second line contains a single line input list of any length.
+Output format:
+Print a 2d list generated after splitting.
+Sample Input
+4
+4 5 6 7 8 9 1 2 3 4 5 6 6
+#### Sample Output: ###### [['4', '8', '3', '6'], ['5', '9', '4'], ['6', '1', '5'], ['7', '2', '6']]
+
+
+
+n=int(input())
+li=list(map(int,input().split()))
+li2=[]
+for i in range(len(li)):
+    li3=[]
+    for j in range(i,len(li),n):
+        li3.append(str(li[j]))
+    if i==n:
+        break
+    li2.append(li3)    
+print(li2)
